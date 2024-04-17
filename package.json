@@ -1,0 +1,23 @@
+{
+  "name": "node-backup",
+  "version": "1.0.0",
+  "description": "An backup script for my Google Drive",
+  "main": "index.js",
+  "scripts": {
+    "start:dev": "tsx src/index.ts"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "archiver": "^7.0.1",
+    "shelljs": "^0.8.5"
+  },
+  "devDependencies": {
+    "@types/archiver": "^6.0.2",
+    "@types/node": "^20.12.7",
+    "@types/shelljs": "^0.8.15",
+    "tsx": "^4.7.2",
+    "typescript": "^5.4.5"
+  }
+}
