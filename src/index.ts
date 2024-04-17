@@ -9,6 +9,7 @@ import { getConfig } from "./utils/config"
 import { ConfigOptions } from "./@types/config"
 
 async function main() {
+  console.log('Starting backup...')
   await verifyConfig()
 
   const config = await getConfig() as ConfigOptions
