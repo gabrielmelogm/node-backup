@@ -12,7 +12,7 @@ export async function saveOnGdrive(filepath: string) {
       return;
     }
   
-    console.log('Upload started')
+    console.log(`${new Date().toISOString()}: Upload started`)
   
     try {
       shell.mv(filepath, config.googleDrivePath)
@@ -24,7 +24,7 @@ export async function saveOnGdrive(filepath: string) {
       
       shell.rm(filepath)
 
-      console.log('File uploaded successfully')
+      console.log(`${new Date().toISOString()}: File uploaded successfully`)
     }
   })
 }

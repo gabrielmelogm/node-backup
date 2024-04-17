@@ -9,7 +9,7 @@ import { getConfig } from "./utils/config"
 import { ConfigOptions } from "./@types/config"
 
 async function main() {
-  console.log('Starting backup...')
+  console.log(`${new Date().toISOString()}: Starting backup...`)
   await verifyConfig()
 
   const config = await getConfig() as ConfigOptions
@@ -42,7 +42,7 @@ async function main() {
   archive.finalize()
   
   output.on('close', async () => {
-    console.log(`The compress is finished on successfully in: ${outputFilePath}`)
+    console.log(`${new Date().toISOString()}: The compress is finished on successfully in: ${outputFilePath}`)
     
     await saveOnGdrive(outputFilePath)
   })
